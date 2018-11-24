@@ -1,3 +1,16 @@
+```
+21. HTMLPurifier – HTML XSS 防护
+
+HTMLPurifier是一个HTML过滤库，通过强大的白名单和聚集分析，保护你代码远离XSS攻击。它也确保输出标记符合标准。 (源码在github上)
+
+require_once '/path/to/HTMLPurifier.auto.php';
+$config = HTMLPurifier_Config::createDefault();
+$purifier = new HTMLPurifier($config);
+$clean_html = $purifier->purify($dirty_html);
+如果你的网站允许用户提交 HTML 代码，不修改就展示代码的话，那这时候就是用这个库的时候了。
+
+
+```
 HTML Purifier [![Build Status](https://secure.travis-ci.org/ezyang/htmlpurifier.svg?branch=master)](http://travis-ci.org/ezyang/htmlpurifier)
 =============
 
